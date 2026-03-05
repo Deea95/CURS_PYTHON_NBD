@@ -1,0 +1,26 @@
+Link Github curs: https://github.com/Gagniuc/Python-Coding-Examples-from-Simple-to-Complex
+Base64 - poze-> text; text->poze (13.ex: 222);
+Librarii; Prompt Engineering;
+
+-- Operatori aritmetrici; operatori critici;
+-- Exemple de atribuiri de valori:
+a =1;(simplu)
+a +=1;(aggregate)
+a =b=c =1;(multiple)
+
+Operatori aritmetrici:
+-- // -> impartire intreaga
+-- % modulo (rest);
+-- ** -> putere
+
+Comentariile in Python:
+# -> o linie
+
+"""
+multe
+linii
+comentate
+"""
+
+
+
