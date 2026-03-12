@@ -12,17 +12,3 @@ c = s / x
 print('AV =', x)
 print('SD =', s)
 print('CV =', c)
-This
-source
-code is fundamental
-for any s
-    prints
-    three
-    statistical
-    measures(average, sta
-    for a given array of numbers.The code begi
-    sum of squared differences (e) from the me
-    the formula for sample standard deviation.It
-    s by the mean x.The results are then print
-    displaying the average (AV), standard devia
-    for a given array of numbers, providing insig
