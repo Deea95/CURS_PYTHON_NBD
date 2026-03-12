@@ -1,8 +1,0 @@
-a = ["a", "a", "a", "a", "a", "a"]
-b = ["b", "b", "b", "b", "b", "b"]
-l = len(a ) -1
-# Swapping the array values.
-for k in range(0, l + 1):
-    t = a[k]
-    print("a =", a)
-    print("b =", b)
