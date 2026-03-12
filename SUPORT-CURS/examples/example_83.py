@@ -1,0 +1,19 @@
+a = [5, 1, 8, 4, 6, 2, 8, 9]
+c = '#'
+t = ''
+n = len(a)
+for i in range(n):
+    for k in range(a[i]):
+        t += c
+    t += '\n'
+print(t)
+loop
+finishes
+for a specific i, a newline cha
+the
+pattern
+of “  # ” characters, is printed to th
+5
+Dynamically
+Resizable
+Arrays(Lists)
