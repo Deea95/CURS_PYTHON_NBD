@@ -7,5 +7,5 @@ A = [
 t = ""
 for i in range(len(A)):
     for j in range(len(A[i])):
-        t += "\n A[{}][{}]={}".format(i,j,A[i][j])
+        t += "\n A[{}][{}]={}".format(i, j, A[i][j])
 print(t)

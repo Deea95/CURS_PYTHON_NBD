@@ -1,12 +1,21 @@
-          txt = '{"v1":["a","b","c"],"v2":' + \
-              '[[0,1,0],[1,1,1],[0,1,0]]' + \
-              ',"v3":{"c1":["a","b","c"]' + \
-              ',"c2":[[0,1,0],[1,1,1],[0' + \
-              ',1,0]],"c3":42}}'
-          obj = json.loads(txt)
-          print(obj['v1'][1])
-          print(obj['v2'][0][1])
-          print(obj['v3']['c2'])
-          print(obj['v3']['c2'][1][1])
-        value ["a", "b", "c"], "c2" with a nested arr
-        the use of the object by printing specific val
+txt = '{"v1":["a","b","c"],"v2":' + \
+      '[[0,1,0],[1,1,1],[0,1,0]]' + \
+      ',"v3":{"c1":["a","b","c"]' + \
+      ',"c2":[[0,1,0],[1,1,1],[0' + \
+      ',1,0]],"c3":42}}'
+obj = json.loads(txt)
+print(obj['v1'][1])
+print(obj['v2'][0][1])
+print(obj['v3']['c2'])
+print(obj['v3']['c2'][1][1])
+value["a", "b", "c"], "c2"
+with a nested arr
+the
+use
+of
+the
+object
+by
+printing
+specific
+val
