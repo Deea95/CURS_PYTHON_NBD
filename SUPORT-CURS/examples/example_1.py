@@ -1,2 +1,7 @@
-        context or explanations for developers read
-        or triple double quotes (""").
+# comentariu linie
+"""
+comentarii
+alte
+liunii
+multe
+"""
