@@ -51,4 +51,4 @@ for v in range(q):
          "][" + str(i) + " ][" + str(j)
     t += str(A[d][i][j]) + "\n"
 print(t)
-value” for each element in the array, where v
+
