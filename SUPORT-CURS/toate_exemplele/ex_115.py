@@ -1,0 +1,21 @@
+# 7.1.21 Ex. (115) – Matrix flip vertical
+# flip vertical.                 Output:
+a = [3 4 5 6
+[1, 2, 3, 4], 9 0 1 2
+     [5, 6, 7, 8], 5 6 7 8
+     [9, 0, 1, 2], 1 2 3 4
+     [3, 4, 5, 6]
+     ]
+d = []
+n = len(a)
+m = len(a[0])
+r = ''
+for i in range(n):
+    # Initialize the
+    # inner list.
+    d.append([0] * m)
+    for j in range(m):
+        d[i][j] = a[n - i - 1][j]
+        r += str(d[i][j]) + ' '
+    r += '\n'
+print(r)

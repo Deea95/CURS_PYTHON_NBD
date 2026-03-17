@@ -1,0 +1,14 @@
+# 5.1.34Ex. (74) – Swap array values
+a = ["a", "a", "a", "a", "a", "a"]
+Output:
+b = ["b", "b", "b", "b", "b", "b"]
+l = len(a) - 1
+a = b, b, b, b, b, b
+b = a, a, a, a, a, a
+# Swapping the array values.
+for k in range(0, l + 1):
+    t = a[k]
+    a[k] = b[k]
+    b[k] = t
+print("a =", a)
+print("b =", b)

@@ -3,90 +3,70 @@ import os
 import re
 
 pdf_path = r"C:\Users\AndreeaIote\Desktop\CURS_PYTHON_NBD\SUPORT-CURS\curs_python.pdf"
-output_folder = r"C:\Users\AndreeaIote\Desktop\CURS_PYTHON_NBD\SUPORT-CURS\examples"
-
+output_folder = r"C:\Users\AndreeaIote\Desktop\CURS_PYTHON_NBD\SUPORT-CURS\toate_exemplele"
 os.makedirs(output_folder, exist_ok=True)
 
 
-def is_actually_code(line):
-    """
-    Filtru drastic: o linie de cod trebuie să aibă simboluri specifice
-    sau să fie foarte scurtă. Dacă e o frază lungă, e text explicativ.
-    """
+def is_python_code(line):
+    """Verifică dacă linia pare a fi cod sau text explicativ."""
     l = line.strip()
     if not l: return False
 
-    # Cuvinte cheie care „garantează” că e cod
-    code_indicators = ['=', 'for ', 'if ', 'print', '+=', 'len(', 'range', 'else:', 'elif']
+    # Eliminăm headerele de pagină și titlurile de capitol
+    if any(x in l for x in ["Paul A. Gagniuc", "Complex Examples", "Synthesis Lectures", "© The Author"]):
+        return False
+    if re.match(r'^\d+$', l): return False  # Numere de pagină
+
+    # Cuvinte cheie care indică text explicativ (nu cod)
+    stop_words = ["The above code", "The point of", "This example", "Specifically", "Note that", "Overall"]
+    if any(l.startswith(word) for word in stop_words):
+        return False
+
+    # Un rând de cod are de obicei operatori sau structuri Python
+    code_indicators = ["=", "def ", "if ", "else:", "return", "print(", "append", "[", "]", "for ", "while "]
     if any(ind in l for ind in code_indicators):
-        # Dacă are indicatori, dar are și prea multe cuvinte (peste 10), e probabil o explicație
-        if len(l.split()) > 10 and "=" not in l[:10]:
-            return False
         return True
 
-    # Liniile care conțin doar caractere de desenat sau paranteze
-    if any(c in l for c in "▮▯[]()"):
+    # Dacă e un comentariu Python
+    if l.startswith("#"):
         return True
 
     return False
 
 
-def save_example(number, lines):
-    if not lines: return
-    # Curățăm liniile parazite care s-ar fi putut strecura la final
-    final_code = []
-    for line in lines:
-        if is_actually_code(line):
-            final_code.append(line)
-        else:
-            # Dacă am dat de un bloc mare de text, ne oprim pentru acest exemplu
-            if len(line.split()) > 8:
-                break
-
-    if final_code:
-        filename = os.path.join(output_folder, f"example_{number}.py")
-        with open(filename, "w", encoding="utf-8") as f:
-            f.write("\n".join(final_code))
-
-
 with pdfplumber.open(pdf_path) as pdf:
-    current_example = None
-    code_lines = []
+    ex_dict = {}
+    current_ex = None
 
+    print("Extragere fină a codului...")
     for page in pdf.pages:
-        # Lăsăm lățimea la 50%, dar filtrăm conținutul rând cu rând
-        width = page.width
-        height = page.height
-        left_area = page.crop((0, 0, width * 0.5, height))
-
-        text = left_area.extract_text(layout=True)
+        text = page.extract_text(layout=True, x_tolerance=3)
         if not text: continue
 
-        for line in text.split("\n"):
-            # Detectăm Ex. (n)
-            match = re.search(r"Ex\.\s*\((\d+)\)", line)
-
+        for line in text.split('\n'):
+            match = re.search(r"Ex\.?\s*\((\d+)\)", line, re.IGNORECASE)
             if match:
-                if current_example:
-                    save_example(current_example, code_lines)
-                current_example = match.group(1)
-                code_lines = []
+                current_ex = int(match.group(1))
+                ex_dict[current_ex] = []
+                # Păstrăm titlul ca comentariu
+                ex_dict[current_ex].append(f"# {line.strip()}")
                 continue
 
-            if current_example:
-                # Sărim peste meta-datele Springer (header/footer)
-                if any(x in line for x in ["Paul A. Gagniuc", "©", "http", "Page"]):
-                    continue
+            if current_ex:
+                # Filtrăm: dacă e cod îl punem, dacă e text lung ne oprim
+                if is_python_code(line):
+                    # Curățăm caracterele speciale de editură
+                    line = line.replace('“', '"').replace('”', '"').replace('‘', "'").replace('’', "'").replace('–',
+                                                                                                                '-')
+                    ex_dict[current_ex].append(line)
+                elif len(line.split()) > 10:  # Dacă e o propoziție lungă fără semne de cod, probabil e finalul
+                    current_ex = None
 
-                # Adăugăm linia dacă trece de filtrul de cod
-                if is_actually_code(line):
-                    code_lines.append(line.rstrip())
-                else:
-                    # Dacă am dat de text explicativ lung, ignorăm restul de pe pagină
-                    if len(line.strip().split()) > 10:
-                        continue
+# Salvare
+for num, lines in ex_dict.items():
+    if len(lines) > 1:  # Doar dacă am găsit mai mult de titlu
+        content = "\n".join(lines)
+        with open(os.path.join(output_folder, f"ex_{str(num).zfill(3)}.py"), "w", encoding="utf-8") as f:
+            f.write(content)
 
-    if current_example:
-        save_example(current_example, code_lines)
-
-print("Gata! Acum codul extras este curat și complet.")
+print("Gata! Verifică acum fișierele.")

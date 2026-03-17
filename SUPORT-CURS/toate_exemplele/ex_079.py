@@ -1,0 +1,8 @@
+# 5.1.39Ex. (79) – Dynamic modulo -take a[i] modulo j
+a = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+Output:
+b = []
+c = 0, 1, 2, 3, 1, 5, 4, 3, 2, 1, 0
+for j in range(11):
+    b.append(a[j] % (j + 1))
+print("c =", b)

@@ -1,0 +1,13 @@
+# 5.1.31Ex. (71) – Cutoff value
+a = [2, 3, 4, 5, 9, 8, 3]
+Output:
+b = [1, 2, 3, 4, 5, 6, 7]
+c = [1, 1, 1, 4, 4, 4, 6]
+c = 0, 0, 0, 14, 14, 14, 10
+l = len(a) - 1
+for k in range(0, l + 1):
+    if a[c[k]] + b[c[k]] > 5:
+        c[k] = a[c[k]] + b[c[k]]
+    else:
+        c[k] = 0
+print("c =", c)
