@@ -1,29 +1,11 @@
-# 7.1.29 Ex. (123) – Different operations based on maps (SMC)
-def SMC(m):                        Output:
+def SMC(m):
+    r = "\n"
+    for i in range(len(m)):
+        for j in range(len(m[i])):
+            r += " " + str(m[i][j]) + " "
+        r += "\n"
+    return r
 
-
-r = "\n"
-for i in range(len(m)):         5
-5
-6
-6
-6
-for j in range(len(m[i])):    1
-5
-6
-6
-5
-r += " " + str(m[i][j]) + " "
-5
-1
-6
-5
-5
-r += "\n"
-6
-6
-6  # 6
-return r
 a = [
     [2, 2, 2, 2, 2],
     [2, 2, 2, 2, 2],
@@ -31,6 +13,7 @@ a = [
     [2, 2, 2, 2, 2],
     [2, 2, 2, 2, 2]
 ]
+
 b = [
     [1, 1, 0, 0, 0],
     [3, 1, 0, 0, 1],
@@ -38,6 +21,7 @@ b = [
     [0, 0, 0, 7, 0],
     [3, 0, 4, 0, 9]
 ]
+
 c = [
     [3, 3, 3, 3, 3],
     [3, 3, 3, 3, 3],
@@ -45,10 +29,12 @@ c = [
     [3, 3, 3, 3, 3],
     [3, 3, 3, 3, 1]
 ]
+
 n = len(a)
-m = len(a[0])
+m_len = len(a[0])
+
 for i in range(n):
-    for j in range(m):
+    for j in range(m_len):
         if b[i][j] == 0:
             c[i][j] = a[i][j] * c[i][j]
         elif b[i][j] == 1:
@@ -66,8 +52,9 @@ for i in range(n):
         elif b[i][j] == 7:
             c[i][j] = ' #'
         elif b[i][j] == 8:
-            pass  # Placeholder for "do stuff"
+            pass  # Placeholder
         elif b[i][j] == 9:
             if c[i][j] <= a[i][j]:
                 c[i][j] = a[i][j]
+
 print(SMC(c))

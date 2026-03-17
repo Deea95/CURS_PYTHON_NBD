@@ -1,6 +1,6 @@
 # 5.1.44Ex. (84) – Horizontal chart with bars proportional with max from array
 a = [5, 2, 8, 4, 6, 22, 8, 9]
-Output:
+
 m = 15  ###
 c = '#'  #
 t = ''

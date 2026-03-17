@@ -1,6 +1,6 @@
 # 7.1.1 Ex. (95) – How many 1's in matrix
-# how many 1's in matrix.          Output:
-a = [[1, 1, 0, 0, 0], 10
+# how many 1's in matrix.
+a = [[1, 1, 0, 0, 0],
 [0, 1, 0, 0, 1],
      [1, 0, 0, 1, 1],
      [0, 0, 0, 0, 0],

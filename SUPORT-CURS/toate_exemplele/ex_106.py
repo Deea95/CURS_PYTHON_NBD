@@ -1,6 +1,6 @@
 # 7.1.12 Ex. (106) – Sum all values from the left and right diagonal by using conditions
 # Sum on principal and secondary diagonals. Output:
-a = [L = 14 | R = 14
+a = [
 [1, 2, 3, 4],
 [5, 6, 7, 8],
 [9, 0, 1, 2],

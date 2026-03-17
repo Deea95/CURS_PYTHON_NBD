@@ -1,6 +1,6 @@
 # 5.1.43Ex. (83) – Horizontal chart from ASCII characters
 a = [5, 1, 8, 4, 6, 2, 8, 9]
-Output:
+
 c = '#'  #####
 t = ''  #
 ########

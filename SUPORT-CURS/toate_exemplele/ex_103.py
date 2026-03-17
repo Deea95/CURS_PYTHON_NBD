@@ -1,10 +1,10 @@
 # 7.1.9 Ex. (103) – Sum all values from the right diagonal of the square matrix
-a = [Output:
+a = [
 [1, 2, 3],
-[4, 5, 6], 3
+[4, 5, 6],
 [7, 8, 9]
-5
-]                       7
+
+]
 d = 0
 n = len(a)
 m = len(a[0])

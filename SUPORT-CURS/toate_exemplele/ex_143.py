@@ -1,12 +1,10 @@
-# 8.2.8 Ex. (143) – Global vaiables and constants
-a = 3.1415  # constant              Output:
-b = 11  # global variable          -109
-
+a = 3.1415  # constant
+b = 11      # global variable
 
 def compute():
     x = b
     return x + x / x - x * x
 
-
 b = compute()
-print(f"{b}\n{A}")
+
+print(f"{b}\n{a}")

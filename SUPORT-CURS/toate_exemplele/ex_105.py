@@ -1,7 +1,7 @@
 # 7.1.11 Ex. (105) – Sum all values from the left and right diagonal of a square matrix
-a = [Output:
+a = [
 [1, 2, 3, 4],
-[5, 6, 7, 8], L = 14 | R = 14
+[5, 6, 7, 8],
 [9, 0, 1, 2],
 [3, 4, 5, 6]
 ]

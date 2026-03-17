@@ -1,9 +1,9 @@
 # 5.1.45Ex. (85) – Horizontal chart with UTF characters proportional with max array
 a = [5, 2, 8, 4, 6, 22, 8, 9]
-Output:
-m = 15                    ▮▮▮▯▯▯▯▯▯▯▯▯▯▯▯
-t = ''                    ▮▯▯▯▯▯▯▯▯▯▯▯▯▯▯
-max_value = 0             ▮▮▮▮▮▯▯▯▯▯▯▯▯▯▯
+
+m = 15
+t = ''
+max_value = 0
 n = len(a)
 for i in range(n):
     if a[i] > max_value:
