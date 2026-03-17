@@ -1,17 +1,17 @@
 # 5.1.24Ex. (64) – Max value above two arrays of different sizes
 a = [2, 3, 4, 5, 9, 8, 3]
-Output:
 b = [14, 2, 3, 41, 5, 6, 77]
 l = [0, 0]
-77
-l[0] = l
-en(a)
-l[1] = l
-en(b)
+
+l[0] = len(a)
+l[1] = len(b)
+
 r = l[0]
 if l[0] < l[1]:
     r = l[1]
+
 max_value = 0
+
 for k in range(r):
     if k < l[0] and max_value < a[k]:
         max_value = a[k]

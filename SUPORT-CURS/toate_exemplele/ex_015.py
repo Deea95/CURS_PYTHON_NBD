@@ -1,4 +1,4 @@
 # 2.1.15Ex. (15) – Line continuation
-s = (1 + 2 + 3 + Output:
+s = (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
 print(s)
-36
+

@@ -1,9 +1,8 @@
 # 5.1.23Ex. (63) – Max value above two arrays of the same size
 a = [2, 3, 4, 5, 9, 8, 3]
-Output:
 b = [1, 2, 3, 4, 5, 6, 7]
 l = len(a)
-9
+
 max_value = 0
 max_a = 0
 max_b = 0
