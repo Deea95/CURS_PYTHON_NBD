@@ -1,8 +1,7 @@
-# 8.2.1 Ex. (136) – Making of a function
-def compute(x):                    Output:
+def compute(x):
+    return x + x / x - x * x
 
-
-return x + x / x - x * x
+# apelul funcției în afara definiției
 a = 10
 b = compute(a)
 print(b)

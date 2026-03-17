@@ -1,7 +1,7 @@
 # 7.1.5 Ex. (99) – Sum all values from the rows of the matrix
-m = [Output:
+m = [
 [2, 4, 4],
-[3, 5, 6], 10, 14, 12
+[3, 5, 6],
 [3, 5, 4]
 ]
 r = []

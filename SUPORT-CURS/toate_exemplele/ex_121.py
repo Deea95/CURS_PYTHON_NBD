@@ -1,16 +1,12 @@
 # 7.1.27 Ex. (121) – Multiply specific elements of two matrices based on a map
-a = [Output:
+a = [
 [2, 4, 6],
-[3, 5, 6], 2
-16
-6
+[3, 5, 6],
+
 [3, 5, 4]
-9
-25
-36
-]                             3
-25
-4
+
+]
+
 b = [
     [0, 1, 0],
     [1, 1, 1],

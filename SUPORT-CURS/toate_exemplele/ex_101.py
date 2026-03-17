@@ -1,11 +1,11 @@
 # 7.1.7 Ex. (101) – Find max and min on columns and rows of a matrix
-C
+
 Max = 3, 5, 6
-R
+
 Max = 4, 6, 5
-C
+
 Min = 2, 4, 4
-R
+
 Min = 2, 3, 3
 m = [
     [2, 4, 4],

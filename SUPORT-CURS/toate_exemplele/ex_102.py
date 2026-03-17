@@ -1,9 +1,9 @@
 # 7.1.8 Ex. (102) – Multiply all values from the columns / rows and store them in array
-m = [Output:
+m = [
 [2, 4, 4],
-[3, 5, 6], C = 18, 100, 96
+[3, 5, 6],
 [3, 5, 4]
-R = 32, 90, 60
+
 ]
 # Initialize a with
 # default values.

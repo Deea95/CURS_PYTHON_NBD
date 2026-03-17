@@ -1,17 +1,13 @@
 # 7.1.17 Ex. (111) – Show top – right, flip 90 degrees left and flip horizontally
-a = [Output:
+a = [
 [1, 2, 3, 4],
-[5, 6, 7, 8], 1
-[9, 0, 1, 2], 2
-6
+[5, 6, 7, 8],
+[9, 0, 1, 2],
 [3, 4, 5, 6]
-3
-7
-1
-]                             4
-8
-2
-6
+]
+
+
+
 d = []
 n = len(a)
 r = ''

@@ -3,7 +3,7 @@
 # the values of the homologous elements
 # of two arrays based on a map/model 5 5 6 6 6
 # (third array).                   1 5 6 6 5
-a = [6 6 6  # 6
+a = [
 [2, 2, 2, 2, 2],
      [2, 2, 2, 2, 2],
      [2, 2, 2, 2, 2],
