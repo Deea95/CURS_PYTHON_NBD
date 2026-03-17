@@ -1,2 +1,6 @@
-# 2.1.1Ex. (1) – Commenting inside code
-# this is a comment in Python      Output:
+# this is a comment in Python
+"""
+This is a multi-line
+comment in Python.
+It can span several lines.
+"""

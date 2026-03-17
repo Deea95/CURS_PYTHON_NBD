@@ -11,8 +11,4 @@ a = 'text';
 # to variable b.
 b = 'text';
 b = 0  # Reassigns b to a numeric value.
-In
-Python, there is no
-special
-keyword
-for declaring a variable, and the type of a variable
+
