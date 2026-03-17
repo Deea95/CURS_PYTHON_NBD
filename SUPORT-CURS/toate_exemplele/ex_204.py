@@ -73,6 +73,7 @@ def dec_bin(a):
 
 
 a = list("☁Ѐ.~ text")
+
 print('Array a =', a)
 print('txt_hex =', txt_hex(a[:]))
 print('hex_bin =', hex_bin(txt_hex(a[:])))
@@ -86,23 +87,3 @@ print('bin_txt =', bin_txt(txt_bin(a[:])))
 print('txt_dec =', txt_dec(a[:]))
 print('dec_hex =', dec_hex(txt_dec(a[:])))
 print('hex_txt =', hex_txt(txt_hex(a[:])))
-Array
-a = ☁, Ѐ,., ~,, t, e, x, t
-txt_hex = 2601, 400, 2
-e, 7
-e, 20, 74, 65, 78, 74
-hex_bin = 10011000000001, 10000000000, 101110, 1111110,
-bin_dec = 9729, 1024, 46, 126, 32, 116, 101, 120, 116
-dec_txt = ☁, Ѐ,., ~,, t, e, x, t
-txt_bin = 10011000000001, 10000000000, 101110, 1111110,
-bin_hex = 2601, 400, 2
-e, 7
-e, 20, 74, 65, 78, 74
-hex_dec = 9729, 1024, 46, 126, 32, 116, 101, 120, 116
-dec_bin = 10011000000001, 10000000000, 101110, 1111110,
-bin_txt = ☁, Ѐ,., ~,, t, e, x, t
-txt_dec = 9729, 1024, 46, 126, 32, 116, 101, 120, 116
-dec_hex = 2601, 400, 2
-e, 7
-e, 20, 74, 65, 78, 74
-hex_txt = ☁, Ѐ,., ~,, t, e, x, t
