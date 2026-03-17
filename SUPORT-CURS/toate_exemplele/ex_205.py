@@ -15,32 +15,23 @@ def convert_to(h, a):
     for i in range(len(a)):
         conversion_type = q + '_' + h
         if conversion_type == 'txt_hex':
-            a[i] = f
-            ormat(ord(a[i]), 'x').zfill(2)
+            a[i] = format(ord(a[i]), 'x').zfill(2)
         elif conversion_type == 'dec_hex':
-            a[i] = f
-            ormat(chr(a[i]), 'x').zfill(2)
+            a[i] = format(chr(a[i]), 'x').zfill(2)
         elif conversion_type == 'txt_bin':
-            a[i] = f
-            ormat(ord(a[i]), 'b')
+            a[i] = format(ord(a[i]), 'b')
         elif conversion_type == 'txt_dec':
-            a[i] = o
-            rd(a[i])
+            a[i] = ord(a[i])
         elif conversion_type == 'hex_dec':
-            a[i] = o
-            rd(chr(int(a[i], 16)))
+            a[i] = ord(chr(int(a[i], 16)))
         elif conversion_type == 'bin_dec':
-            a[i] = o
-            rd(chr(int(a[i], 2)))
+            a[i] = ord(chr(int(a[i], 2)))
         elif conversion_type == 'hex_txt':
-            a[i] = c
-            hr(int(a[i], 16))
+            a[i] = chr(int(a[i], 16))
         elif conversion_type == 'bin_txt':
-            a[i] = c
-            hr(int(a[i], 2))
+            a[i] = chr(int(a[i], 2))
         elif conversion_type == 'dec_txt':
-            a[i] = c
-            hr(a[i])
+            a[i] = chr(a[i])
         elif conversion_type == 'dec_bin':
             a[i] = format(ord(chr(a[i])), 'b')
         elif conversion_type == 'hex_bin':
@@ -53,8 +44,3 @@ def convert_to(h, a):
 a = list("☁Ѐ.~ text")
 print('Array a =', a)
 print(convert_to('bin', a))
-Array
-a = ☁, Ѐ,., ~,, t, e, x, t
-Separate
-functions
-for one to one conversions are important pieces of code that can be
