@@ -1,6 +1,4 @@
 # 10.3.2 Ex. (176) – Logical AND
-AND[1, 0] -> 0
-
 
 def f_and(a, b):
     return a * b

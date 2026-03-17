@@ -1,19 +1,19 @@
 # 9.1.1 Ex. (153) – Using an object constructor
-def __init__(self, a, b, c, d):
-    self.ax = list(a)
-    s, o, m, e | t, e, x, t
-    self.bx = len(self.ax)
-    4 | 4
-    self.cx = c - b - 16 | -37
-    self.dx = d * c
-    3850 | 3696
-
+class Obj:
+    def __init__(self, a, b, c, d):
+        self.ax = list(a)
+        self.bx = len(self.ax)
+        self.cx = c - b - 16 | -37
+        self.dx = d * c
 
 o1 = Obj("some", 66, 50, 77)
 o2 = Obj("text", 85, 48, 77)
+
 print(o1.ax, "|", o2.ax)
 print(o1.bx, "|", o2.bx)
 print(o1.cx, "|", o2.cx)
 print(o1.dx, "|", o2.dx)
+
 o1.bx = 100
+
 print(o1.bx, "|", o2.bx)

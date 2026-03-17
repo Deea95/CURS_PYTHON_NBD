@@ -1,6 +1,4 @@
 # 10.3.3 Ex. (177) – Logical OR
-OR[1, 0] -> 1
-
 
 def f_or(a, b):
     return (a + b) - (a * b)

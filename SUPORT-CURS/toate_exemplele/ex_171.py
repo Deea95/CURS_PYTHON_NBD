@@ -1,32 +1,11 @@
 # 10.1.7 Ex. (171) – Load two matrices from strings and make the addition
-def load(c):                      Output:
+def load(c):
+    n = c.split('|')
+    m = []
 
-
-n = c.split('|')
-m = []
-12
-2
-44
-1
-0
-for i in n:                     1
-2
-3
-4
-5
-m.append([int(x) for x in i.split(',')])
-5
-4
-3
-2
-1
-return m
-66
-5
-45
-10
-10
-
+    for i in n:
+        m.append([int(x) for x in i.split(',')])
+    return m
 
 def SMC(m):
     r = ""
@@ -35,7 +14,6 @@ def SMC(m):
             r += str(item) + ps(item, 3)
         r += "\n"
     return r
-
 
 def ps(a, s):
     t = ""
@@ -46,12 +24,18 @@ def ps(a, s):
 
 
 c1 = '12,2,44,1,0|34,5,6,7,8|' + \
-     c2 = '66,5,45,10,10|37,50,60,17,18|' + \
-          m1 = load(c1)
+     '1,2,3,4,5|5,4,3,2,1'
+c2 = '66,5,45,10,10|37,50,60,17,18|' + \
+     '10,25,37,4,5|5,4,3,2,1'
+
+m1 = load(c1)
 m2 = load(c2)
+
 sm = []
+
 print(SMC(m1))
 print(SMC(m2))
+
 for i in range(len(m1)):
     sm.append([])
     for j in range(len(m1[i])):

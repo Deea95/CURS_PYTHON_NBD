@@ -1,6 +1,6 @@
 # 10.5.2 Ex. (190) – Low level native sort and eliminate duplicates (II)
 a = {}
-Output:
+
 b = [3, 6, 2, 78, 99, 1, 4]
 n = len(b)
 r = n

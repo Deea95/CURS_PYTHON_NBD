@@ -2,13 +2,13 @@
 # This example creates an          Output:
 # object with three properties.
 # The cx property is a method.     this text
-def __init__(self):
-    self.ax = "this"
-    self.bx = "text"
+class Obj:
+    def __init__(self):
+        self.ax = "this"
+        self.bx = "text"
 
-
-def cx(self):
-    return self.ax + " " + self.bx
+    def cx(self):
+        return self.ax + " " + self.bx
     # Create an instance of the
 # Obj class and call the cx method.
 obj = Obj()

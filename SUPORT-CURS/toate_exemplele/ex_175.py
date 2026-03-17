@@ -1,8 +1,6 @@
 # 10.3.1 Ex. (175) – Logical NOT
-def f_not(a):                     Output:
-
-
-return 1 - a
+def f_not(a):
+    return 1 - a
 # Alternatively, the other        0 -> 1
 # versions of the function
 # can be used, but they are

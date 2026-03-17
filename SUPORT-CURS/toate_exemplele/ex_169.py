@@ -1,21 +1,11 @@
 # 10.1.5 Ex. (169) – A function to correctly display a matrix
-def ps(a, s):                     Output:
+def ps(a, s):
 
-
-t = ""
-b = s - (len(str(a)) % s)
-20
-4
-60
-for i in range(b):              39
-5
-60
-t += " "
-3
-50
-40
-return t
-
+    t = ""
+    b = s - (len(str(a)) % s)
+    for i in range(b):
+        t += " "
+    return t
 
 def SMC(m):
     r = "\n"
