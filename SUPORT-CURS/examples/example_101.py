@@ -1,5 +1,3 @@
-# 7.1.7 Ex. (101) – Find max and min on columns and rows of a matrix
-
 m = [
     [2, 4, 4],
     [3, 5, 6],
@@ -29,8 +27,6 @@ print('C Max =', a[0])
 print('R Max =', a[1])
 print('C Min =', a[2])
 print('R Min =', a[3])
-
-# or an optimised version:
 m = [
     [2, 4, 4],
     [3, 5, 6],
@@ -52,3 +48,34 @@ print('C Max =', a[0])
 print('R Max =', a[1])
 print('C Min =', a[2])
 print('R Min =', a[3])
+first
+set(a[0][j]
+anda[1][i]) is designed
+to
+and row
+of
+the
+m
+matrix.The
+second
+set(a[2
+code
+outputs
+the
+results
+using
+the
+print
+statem
+(1) “C
+Max” represents
+the
+maximum
+valu
+Max” represents
+the
+maximum
+value
+for eac
+the minimum value for each column of mat
+value for each row of m.A second version of
