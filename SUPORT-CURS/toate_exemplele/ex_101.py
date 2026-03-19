@@ -36,6 +36,7 @@ print('C Max =', a[0])
 print('R Max =', a[1])
 print('C Min =', a[2])
 print('R Min =', a[3])
+
 # or an optimised version:
 m = [
     [2, 4, 4],
