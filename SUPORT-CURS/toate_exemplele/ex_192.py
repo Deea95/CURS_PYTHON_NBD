@@ -1,20 +1,14 @@
 # 10.6.1 Ex. (192) – Get all permutations of a given string (I)
 a = []
-Output:
 
-
-def permute(s, r, l):             ACTG,
-
-
-if l == r:                      ACGT,
-a.append(s)
-ATCG,
-else:                           ATGC,
-for i in range(l, r + 1):     AGTC,
-s = swap(s, l, i)
-AGCT,
-s = swap(s, l, i)
-
+def permute(s, r, l):
+    if l == r:
+        a.append(s)
+    else:
+        for i in range(l, r + 1):
+            s = swap(s, l, i)
+            permute(s,r, l+1)
+            s = swap(s, l, i)
 
 def swap(s, i, j):
     c = list(s)
@@ -26,6 +20,6 @@ def swap(s, i, j):
 
 s = "ACTG"
 n = len(s)
-TGAC,
+permute(s,n-1, 0)
 print(a)
-GCTA,
+
