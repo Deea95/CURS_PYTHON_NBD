@@ -641,3 +641,9 @@ if c < b:
     print((b - c)/len(q)) # de cate ori a contine q
 """
 
+"""
+# Making of a function with more than one parameter 
+def mul(a, b):
+    return a * b 
+print(mul(2, 5)) 
+"""
