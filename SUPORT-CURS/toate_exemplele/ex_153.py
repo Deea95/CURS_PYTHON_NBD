@@ -3,7 +3,7 @@ class Obj:
     def __init__(self, a, b, c, d):
         self.ax = list(a)
         self.bx = len(self.ax)
-        self.cx = c - b - 16 | -37
+        self.cx = c - b
         self.dx = d * c
 
 o1 = Obj("some", 66, 50, 77)
