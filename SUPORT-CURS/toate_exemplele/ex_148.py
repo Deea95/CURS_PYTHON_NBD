@@ -1,4 +1,4 @@
-# 8.3.3 Ex. (148) – Sum from 0 to n recursively
+# Sum from 0 to n recursively
 def sum(n):
     if n <= 1:
         return n

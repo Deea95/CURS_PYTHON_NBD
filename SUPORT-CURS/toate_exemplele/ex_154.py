@@ -1,7 +1,7 @@
 # 9.1.2 Ex. (154) – An object with three properties and a method (I)
-# This example creates an          Output:
+# This example creates an
 # object with three properties.
-# The cx property is a method.     this text
+# The cx property is a method.
 class Obj:
     def __init__(self):        #init este ca si main   # functia init este default
         self.ax = "this"

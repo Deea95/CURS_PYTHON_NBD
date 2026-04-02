@@ -1,3 +1,4 @@
+# Factorial from 0 to n
 def factorial(n):
     if n <= 1:
         return 1
