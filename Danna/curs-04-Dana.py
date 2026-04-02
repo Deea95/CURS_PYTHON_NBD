@@ -382,35 +382,302 @@ else:
             except json.JSONDecodeError:
                 print(f"Eroare JSON pe linia {i}: {line}")
 """
-import json
-import os
 
-# cale către fișier
-file_path = r"C:\Users\AndreeaIote\Desktop\CURS_PYTHON_NBD\SUPORT-CURS\log2.txt"
 
-total_v2 = 0  # accumulator
-count_v2 = 0  # câte valori valide am găsit
 
-if not os.path.exists(file_path):
-    print(f"Fișierul nu există: {file_path}")
-else:
-    with open(file_path, "r", encoding="utf-8") as f:
-        for i, line in enumerate(f, start=1):
-            line = line.strip()
 
-            if not line:
-                continue
+# import json
+# import os
+#
+# # cale către fișier
+# file_path = r"C:\Users\AndreeaIote\Desktop\CURS_PYTHON_NBD\SUPORT-CURS\log2.txt"
+#
+# total_v2 = 0  # accumulator
+# count_v2 = 0  # câte valori valide am găsit
+#
+# if not os.path.exists(file_path):
+#     print(f"Fișierul nu există: {file_path}")
+# else:
+#     with open(file_path, "r", encoding="utf-8") as f:
+#         for i, line in enumerate(f, start=1):
+#             line = line.strip()
+#
+#             if not line:
+#                 continue
+#
+#             try:
+#                 obj = json.loads(line)
+#                 v2_value = obj.get("v2")
+#
+#                 if isinstance(v2_value, (int, float)):
+#                     total_v2 += v2_value
+#                     count_v2 += 1
+#
+#             except json.JSONDecodeError:
+#                 print(f"Eroare JSON pe linia {i}: {line}")
+#
+# print(f"Total v2 = {total_v2}")
+# print(f"Număr valori v2 = {count_v2}")
 
-            try:
-                obj = json.loads(line)
-                v2_value = obj.get("v2")
 
-                if isinstance(v2_value, (int, float)):
-                    total_v2 += v2_value
-                    count_v2 += 1
 
-            except json.JSONDecodeError:
-                print(f"Eroare JSON pe linia {i}: {line}")
+# # Make a matrix from parts of an object
+# import json
+#
+# txt = '{"v1":["a","b","c"],"v2":' + \
+#       '[[0,1,0],[1,1,1],[0,1,0]]' + \
+#       ',"v3":{"c1":["a","b","c"]' + \
+#       ',"c2":[[0,1,0],[1,1,1],[0' + \
+#       ',1,0]],"c3":42}}'
+#
+# obj = json.loads(txt)
+# a = []
+#
+# for i in range(len(obj['v3']['c2'])):
+#     a.append([])
+#     for j in range(len(obj['v3']['c2'][i])):
+#         a[i].append(obj['v3']['c2'][i][j])
+#
+# def smc(m):
+#     r = ''
+#     for i in range(len(m)):
+#         for j in range(len(m[i])):
+#             r += str(m[i][j]) + " "
+#         r += "\n"
+#     return r
+#
+# print(smc(a))
 
-print(f"Total v2 = {total_v2}")
-print(f"Număr valori v2 = {count_v2}")
+
+
+# # Strings to 1D arrays (I)
+# def main_app():
+#
+#     a = "10|13|55|56|1|3|123"   # pentru fisiere de tip text (cand lucram cu fiesere de tip text de genul)
+#     b = "45|33|55|0|1|22|127"
+#
+#     aa = a.split("|")
+#     bb = b.split("|")
+#     cc = []
+#
+#     for i in range(len(aa)):
+#         cc.append(daniela(i, aa, bb))
+#     print(cc)
+#
+#
+# def daniela(i, aa, bb):
+#     return int(aa[i]) * int(bb[len(aa) - 1 - i])
+#
+# d = main_app()
+
+
+# # A 2D array loaded from string
+# def SMC(matrix):
+#
+#     result = ""
+#     for row in matrix:
+#         for item in row:
+#             result += item + " "
+#         result += "\n"
+#     return result
+#
+# c = 'AAAAA|BBBBB|CCCCC|DDDDD'
+# n = c.split('|')
+#
+# m = [list(row) for row in n]
+# print(SMC(m))
+# def SMC(matrix):
+#
+#     result = ""
+#     for row in matrix:
+#         for item in row:
+#             result += item + " "
+#         result += "\n"
+#     return result
+#
+# c = 'AAAAA|BBBBB|CCCCC|DDDDD'
+# n = c.split('|')
+#
+# m = [list(row) for row in n]
+# print(SMC(m))
+
+
+# #Load a matrix from a string by using two delimiters
+# #Initialize empty lists.
+# n = []
+# m = []
+#
+#
+# # Input string.
+# c = '1,2,4,1,0|3,5,6,7,8|1,2,3,4,5|5,4,3,2,1'
+#
+# def bahdir(c):
+#     # Referencing the
+#     # global variable m.
+#     global m
+#
+#     n = c.split('|')
+#
+#     for i in range(len(n)):
+#         m.append(n[i].split(','))
+#
+#     for i in range(len(m)):
+#         for j in range(len(m[i])):
+#             m[i][j] = int(m[i][j])
+#     return m
+#
+# def smc(m):
+#     r = "\n"
+#     for i in range(len(m)):
+#         for j in range(len(m[i])):
+#             r += " " + str(m[i][j]) + " "
+#         r += "\n"
+#     return r
+#
+# print(smc(bahdir(c)))
+
+
+
+# # A function to correctly display a matrix
+# def ps(a, s):
+#
+#     t = ""
+#     b = s - (len(str(a)) % s)
+#     for i in range(b):
+#         t += " "
+#     return t
+#
+# def SMC(m):
+#     r = "\n"
+#     for i in range(len(m)):
+#         for j in range(len(m[i])):
+#             r += str(m[i][j]) + ps(m[i][j], 3)
+#         r += "\n"
+#     return r
+#
+#
+# m = [
+#     [20, 4, 60],
+#     [39, 5, 60],
+#     [3, 50, 40]
+# ]
+# print(SMC(m))
+
+
+
+# # A function to load and display matrices
+# def load(c):
+#     n = c.split('|')
+#     m = []
+#
+#     for i in range(len(n)):
+#         m.append(n[i].split(','))
+#
+#     for i in range(len(m)):
+#         for j in range(len(m[i])):
+#             m[i][j] = int(m[i][j])
+#     return m
+#
+# def SMC(m):
+#     r = ""
+#     for i in range(len(m)):
+#         for j in range(len(m[i])):
+#             r += str(m[i][j]) + ps(m[i][j],3)
+#         r += "\n"
+#     return r
+#
+#
+# def ps(a, s):
+#     t = ""
+#     b = s - (len(str(a)) % s)
+#     for i in range(b):
+#         t += " "
+#     return t
+#
+#
+# c1 = '12,2,44,1,0|34,5,6,7,8|' + \
+#      '1,2,3,4,5|5,4,3,2,1'
+# c2 = '66,5,45,10,10|37,50,60,17,18|' + \
+#      '10,25,37,4,5|5,4,3,2,1'
+# c3 = '66,5,45,10,10|37,50,60,17,18|' + \
+#      '10,25,37,4,5|5,4,3,2,1'
+# print(SMC(load(c1)))
+# print(SMC(load(c2)))
+# print(SMC(load(c3)))
+
+
+
+# import os
+# import csv
+# cale = r"C:\Users\DanielaOancea\OneDrive - New Business Dimensions\Desktop\NBD\curs Python\CURS_PYTHON_NBD\SUPORT-CURS\angajati.csv"
+#
+# with open(cale, "r", encoding="utf-8") as f:
+#     reader = csv.DictReader(f)
+#     randuri = list(reader)
+#
+# angajati_it = []
+# salariu_total = 0
+# salariu_maxim = -1
+# cel_mai_bine_platit = None
+#
+# for rand in randuri:
+#     salariu = int(rand["salariu"])
+#     salariu_total += salariu
+#
+#     # exemplu: filtrăm IT
+#     if rand.get("departament") == "IT":
+#         angajati_it.append(rand)
+#
+#     # salariu maxim
+#     if salariu > salariu_maxim:
+#         salariu_maxim = salariu
+#         cel_mai_bine_platit = rand
+#
+# print("Total salarii:", salariu_total)
+# print("Angajati IT:", angajati_it)
+# print("Cel mai bine platit:", cel_mai_bine_platit)
+
+
+# Load two matrices from strings and make the addition
+def load(c):
+    n = c.split('|')
+    m = []
+    for i in n:
+        m.append([int(x) for x in i.split(',')])
+    return m
+
+
+def SMC(m):
+    r = ""
+    for row in m:
+        for item in row:
+            r += str(item) + ps(item,3)
+        r += "\n"
+    return r
+
+
+
+def ps(a, s):
+    t = ""
+    b = s - (len(str(a)) % s)
+    for _ in range(b):
+        t += " "
+    return(t)
+
+
+c1 = '12,2,44,1,0|34,5,6,7,8|' + \
+    '1,2,3,4,5|5,4,3,2,1'
+
+c2 = '66,5,45,10,10|37,50,60,17,18|' +\
+    '10,25,37,4,5|5,4,3,2,1'
+
+m1 = load(c1)
+m2 = load(c2)
+sm = []
+print(SMC(m1))
+print(SMC(m2))
+for i in range(len(m1)):
+    sm.append([])
+    for j in range(len(m1[i])):
+        sm[i].append(m1[i][j] + m2[i][j])
+print(SMC(sm))
