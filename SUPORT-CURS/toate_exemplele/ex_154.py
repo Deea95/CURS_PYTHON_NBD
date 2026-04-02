@@ -3,7 +3,7 @@
 # object with three properties.
 # The cx property is a method.     this text
 class Obj:
-    def __init__(self):
+    def __init__(self):        #init este ca si main   # functia init este default
         self.ax = "this"
         self.bx = "text"
 
@@ -12,4 +12,5 @@ class Obj:
     # Create an instance of the
 # Obj class and call the cx method.
 obj = Obj()
+print(obj.ax)
 print(obj.cx())

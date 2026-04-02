@@ -16,7 +16,7 @@ class Obj:
         x = b / n
 
         for j in a:
-            e += (j - x) ** 2
+            e += (j -x) ** 2      # **2 inseamna la puterea a doua
 
         s = (e / (n - 1)) ** 0.5
         c = s / x
