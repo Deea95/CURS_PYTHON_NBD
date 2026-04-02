@@ -15,6 +15,7 @@ c = []
 r = ""
 for i in range(len(a)):
     r += "\n"
+
     c.append([])
     for j in range(len(a[i])):
         c[i].append(0)

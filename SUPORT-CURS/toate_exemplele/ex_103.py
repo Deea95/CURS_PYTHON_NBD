@@ -23,12 +23,12 @@ a = [
     [4, 5, 6],
     [7, 8, 9]
 ]
-d = 0
+d=0
 n = len(a)
 m = len(a[0])
 i = 0
 for j in range(m):
     d += a[i][m - j - 1]
     print(a[i][m - j - 1])
-    i += 1
+    i+=1
 print('---\n' + str(d))

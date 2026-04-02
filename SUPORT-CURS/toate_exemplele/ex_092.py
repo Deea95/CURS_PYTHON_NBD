@@ -15,3 +15,5 @@ for k in range(n * m):
     t += f"{k} A[{i}][{j}]={A[i][j]}\n"
 
 print(t)
+
+
