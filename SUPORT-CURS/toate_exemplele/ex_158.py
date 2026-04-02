@@ -1,5 +1,5 @@
 # 9.2.1 Ex. (158) – Object to JSON
-# a Python object...          Output:
+# a Python object...
 # ... converted into JSON:
 import json
 
