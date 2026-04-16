@@ -2,20 +2,16 @@ def p(a):
     max_value = max(a)
     n = len(a)
     m = 100
+
+    # Preaallocate the list
+    # with the required size.
+
     t = [''] * n
     for i in range(n):
-        t[i] = str(round((m / max_value
-                          a =[5, 1, 8, 4, 6, 2, 9, 8]
-                          print(p(a))
+        t[i] = str(round((m / max_value) * a[i]))+ '%'
+
+    return t
 
 
-def p(a):
-    max_value = max(a)
-    n = len(a)
-    m = 100
-    t = []
-    for i in range(n):
-        t.append(str(round((m / max_val
-                            a =[5, 1, 8, 4, 6, 2, 9, 8]
-                            print(p(a))
-        of “.append”).
+......
+
