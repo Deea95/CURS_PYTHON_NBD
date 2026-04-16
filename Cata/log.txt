@@ -1,0 +1,6 @@
+2026-04-02 10:15:23 INFO Application started
+2026-04-02 10:15:30 INFO User login: paul
+2026-04-02 10:16:02 WARNING Disk space low
+2026-04-02 10:16:45 ERROR Invalid password for user paul
+2026-04-02 10:17:10 ERROR Connection timeout to database
+2026-04-02 10:18:05 INFO User logout: paul
