@@ -4,31 +4,21 @@ def block_allocation(L):
     b = 1
     t = 5  # min block length.
     m = 8  # max block length.
-    a = a + 1
-    t = L % a
-    r = L - t
-    v = r % 2
-    t += 1
-    if not (t > 3 and v == 0):
+    while True:
+        a = a + 1
+        t = L % a
+        r = L - t
+        v = r % 2
+        t += 1
+        if not (t > 3 and v == 0):
+            break
+    while True:
         m = m + 1
-    b = r % m
-    if not (b == 0 or m > 1000):
-
+        b = r % m
+        if not (b == 0 or m > 1000):
+            break
+    return m
 
 x = block_allocation(133)
 print(x)
-allocation[18].The
-point
-of
-the
-algorithm
-i
-t, r, andv
-until
-the
-condition(t > 3 and v ==
-          until
-the
-condition(b == 0
-orm > 1000) is n
-with the argument 133, and it prints the valu
+

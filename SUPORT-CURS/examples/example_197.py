@@ -18,15 +18,4 @@ t[m - j - 1][i] = '\u2591'
 if j < f:
     t[m - j - 1][i] = '\u2593'
 print(smc(t))
-mation
-Interchange) / UTF - 8
-chart
-can
-be
-m
-a[i], and then
-it
-assigns
-the
-corresponding
-ch
+

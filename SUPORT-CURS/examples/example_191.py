@@ -22,29 +22,3 @@ def bs(a):
 
 a = [4, 5, 8, 1, 1, 5, 2, 9]
 print(bs(a))
-swap.Also, the
-outer
-loop(i)
-iterates
-n − 1
-t
-code
-calls
-the
-bs(a)
-function
-with the array
-console
-for user inspection.
-    refers
-to
-an
-arrangement
-of
-objects or eleme
-of
-permutations
-encompasses
-a
-wide
-range

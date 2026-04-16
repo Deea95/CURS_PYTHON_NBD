@@ -23,10 +23,4 @@ s = "ACTG"
 n = len(s)
 permute(s, n - 1, 0)
 print(a)
-that
-takes
-three
-arguments: s(the
-string
-to
-be
+

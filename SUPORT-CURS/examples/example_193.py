@@ -14,23 +14,4 @@ a = ''
 b = []
 permute(s, a, b)
 print(b)
-function
-a
-few
-statements
-allow
-for the per
-    and r(the
-    characters
-    to
-    the
-    right
-    of
-    c).Also,
-    console
-    for the user inspection, which contai
-    tion, statistics
-    serves as a
-    crucial
-    tool
-    for bo
+

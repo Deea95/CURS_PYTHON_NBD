@@ -38,39 +38,3 @@ def SMC(a):
 
 print(SMC(chart(a)))
 print('\n' + str(a))
-code
-prints
-the
-result
-of
-the
-SMC(chart(a))
-fu
-array
-a and then
-prints
-a
-visual
-representation
-block
-characters(▓ ░) to
-represent
-the
-d
-is returned
-at
-the
-end.The
-SMC(a)
-function
-row,
-with underscores(“_”) at the bottom, “
-labels
-for each column at the top.The resul
-then
-returned.In
-the
-end, the
-code
-prints
-the

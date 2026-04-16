@@ -10,25 +10,3 @@ for j in range(m):
         b[r] = a[j]
         r += 1
 print(b)
-Inside
-the
-loop, it
-assigns
-the
-value
-of
-b[i]
-t
-the
-number
-of
-elements), and stores
-it in the
-that
-value
-to
-b[r] and increments
-the
-value
-ranges and is written
-for this book.To my

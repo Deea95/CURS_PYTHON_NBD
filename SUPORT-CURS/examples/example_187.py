@@ -9,14 +9,7 @@ def alpha(c):
                 q = 0
         if q == 1:
             a.append(t[i])
-
+    return a
 
 print(alpha('uiuhd87wqsaidhsad'))
-of
-text(ex.input: “ABBBABBACABBA”; o
-code
-checks if the
-current
-character in t
-at
-i
+

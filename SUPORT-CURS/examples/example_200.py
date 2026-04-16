@@ -9,8 +9,4 @@ for i in range(len(a)):
     # else:
     #  c[i] = b
 print(c)
-mirrored
-twin
-books in this
-series).The
-code
+
