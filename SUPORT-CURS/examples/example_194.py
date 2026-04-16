@@ -18,4 +18,4 @@ def p(a):
         t.append(str(round((m / max_val
                             a =[5, 1, 8, 4, 6, 2, 9, 8]
                             print(p(a))
-
+        of “.append”).
