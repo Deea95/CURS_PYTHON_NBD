@@ -1,3 +1,7 @@
+# 10.7.6 Ex. (199) – Shannon entropy
+import math
+
+
 def entropy(c):
     a = alpha(c)
     n = len(a)
@@ -7,10 +11,11 @@ def entropy(c):
         r = len(c.replace(a[i], ''))
         a[i] = (k - r) / k
         # e += -a[i] * log(2, a[i])
-        e += a[i] * l
-        og(2, 1 / a[i])
+        e += a[i] * log(2, 1 / a[i])
+    return e
 
 
+# ALPHABET DETECTION.
 def alpha(c):
     a = []
     t = list(c)
@@ -22,6 +27,7 @@ def alpha(c):
                 q = 0
         if q == 1:
             a.append(t[i])
+    return a
 
 
 def log(n, v):
@@ -29,4 +35,3 @@ def log(n, v):
 
 
 print(entropy('uiuhd87wqsaidhsad'))
-

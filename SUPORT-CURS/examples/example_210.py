@@ -1,3 +1,4 @@
+# 11.1.4 Ex. (210) – Decompose a matrix into multiple matrices based on unique values
 def matrix_alphabet(t):
     a = []
     n = len(t)
@@ -5,11 +6,12 @@ def matrix_alphabet(t):
     for i in range(n):
         for j in range(m):
             q = 1
-            for k in range(len(a) +
-                           if k < len(a) and t[
-                q = 0
+            for k in range(len(a) + 1):
+                if k < len(a) and t[i][j] == a[k]:
+                    q = 0
             if q == 1:
                 a.append(t[i][j])
+    return a
 
 
 def decompose(c, a):
@@ -20,10 +22,12 @@ def decompose(c, a):
         d.append([])
         for j in range(m):
             d[i].append([])
-            for k in range(len(a) +
-                           d[i][j].append(" ")
-                           if k < len(a) and c
-            d[i][j][k] =c[
+            for k in range(len(a) + 1):
+                d[i][j].append(" ")  # "\u2591"
+                if k < len(a) and c[i][j] == a[k]:
+                    d[i][j][k] = c[i][j]
+    return d
+    return d
 
 
 def SMC(m, k):
@@ -35,8 +39,10 @@ def SMC(m, k):
             r += str(m[i][j][k])
         r += "|\n"
     r += ' ----------'
+    return r
 
 
+# Main code
 r = "u"
 c = [
     [1, 1, 1, 1, 1, 1, 0, 1, 1, 1],
@@ -54,28 +60,4 @@ t = decompose(c, b)
 for k in range(len(b)):
     print(SMC(t, k))
 print(b)
-that
-matrix.The
-code
-also
-prints
-the
-decom
-array
-b, and for each unique value in b, it
-through
-the
-elements
-of
-t, checks if each
-valu
-is surrounded
-by
-lines and separators
-for b
-    printing
-the
-alphabet
-array
-b and the
-decomp
+

@@ -122,3 +122,29 @@ else:
 print(AA)
 print(AM)
 print(AB)
+matches = 0
+total = 0
+
+# # var 1
+# matches = 0
+# aligned_positions = len(AA)
+#
+# for i in range(aligned_positions):
+#     if AA[i] == AB[i] and AA[i] != '-' and AB[i] != '-':
+#         matches += 1
+#
+# similarity = (matches / aligned_positions) * 100
+# print(f"Similarity: {similarity:.2f}%")
+
+# sau var 2
+matches = 0
+total = 0
+
+for i in range(len(AA)):
+    if AA[i] != '-' or AB[i] != '-':
+        total += 1
+        if AA[i] == AB[i]:
+            matches += 1
+
+similarity = (matches / total) * 100
+print(f"Similarity: {similarity:.2f}%")
